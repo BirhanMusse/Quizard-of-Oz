@@ -1,0 +1,68 @@
+<app-nav></app-nav>
+<br>
+<br>
+
+      <div class="container-flex">
+            <div class="row">
+              <div class="col text-center">
+                <h3>SELECTED STUDY CARDS</h3>
+                <div>
+                    <select (change)="filterFlashCards($event.target.value)">
+                      <option value="">  </option>
+                              <!-- <div *ngIf=" flashcard.topic.topicName == 'Geography'"> -->
+              
+                        <option *ngFor="let topic of this.topics" value="{{topic.topicName}}">
+                          {{topic.topicName}}
+              
+                        </option>
+                            <!-- </div> -->
+              
+                        <!-- <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="opel">Opel</option>
+                        <option value="audi">Audi</option> -->
+                      </select>
+                    </div>
+              <br>
+              <br>
+                  <br>
+              <h5>Hover over the flashcard to see the Answer!</h5>
+                  
+              <br>
+              
+              
+              <div *ngFor="let flashcard of this.flashcards">
+                <div *ngIf="(flashcard.topic.topicName== flashCatagory) && Mastered">
+                  <div>
+                        <div class="flip-card ">
+                          <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <!-- <div *ngFor="let flashcard of this.flashcards"> -->
+                                  <h2> {{flashcard.question}} </h2>
+              
+                                  <!-- </div> -->
+                                
+                            </div>
+                            <div class="flip-card-back">
+                                <!-- <div *ngFor="let flashcard of this.flashcards"> -->
+                                    <br>
+                                    <h2>{{flashcard.answer}}</h2>
+                                    <br>Category: {{flashcard.topic.topicName}}
+                                    <br><br><br><br><button (click)="questionMastered(flashcard)" class="del">Mastered</button>
+                                  <!-- </div> -->
+                            </div>
+                          </div>
+                        </div>
+              <br> <br>
+              </div>
+              </div>
+              </div>
+              
+                  <br> <br>
+                  </div>
+                  </div>
+                 
+
+          <br>
+          <br>
+<app-footer></app-footer>

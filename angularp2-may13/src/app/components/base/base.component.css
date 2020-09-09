@@ -1,0 +1,12 @@
+.container{
+    margin-top: 10%;
+    align-content: center;
+    }
+    
+    .card{
+    height: 160px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: silver !important;
+    }

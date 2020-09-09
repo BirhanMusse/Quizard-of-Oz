@@ -1,0 +1,13 @@
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Create Card</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <app-create-card></app-create-card>
+    </div>
+  </ng-template>
+  
+  <button class="btn btn-outline-primary mb-2 mr-2" (click)="openVerticallyCentered(content)">Create New Card</button>

@@ -1,0 +1,20 @@
+
+
+<div class="card">
+    <div class="card-header">
+      User Attempts
+    </div>
+      <div class="card-body">
+        <p class="card-text"></p>
+        <div *ngFor="let attempt of this.attempts; let i=index">
+            <h4>Attempt #{{i+1}} </h4>
+            Question: {{attempt.userCard.card.question}}
+            <br>Result: {{attempt.result.resultName }}<br>
+            <br>
+          </div>
+       
+    </div>
+    <div class="card-footer text-muted">
+      </div>
+</div>
+

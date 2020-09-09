@@ -1,0 +1,14 @@
+.jumbotron {
+  background: url('src/assets/img/emerald.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 300px;
+  min-width:400px;
+}
+
+#logOutButton {
+margin-top: auto;  
+margin-bottom: auto; 
+}

@@ -1,0 +1,54 @@
+<app-nav></app-nav>
+<br>
+<br>
+
+      <div class="container-flex">
+            <div class="row">
+              <div class="col text-center">
+                <h1>All Available Cards</h1>
+                <hr>
+                <hr>
+                <form [formGroup]="studySetForm" (ngSubmit)="onSubmit()">
+                <div *ngFor="let flashcard of this.flashcards">
+                    <!-- <div *ngIf="(flashcard.topic.topicName== flashCatagory)"> -->
+                      <div>
+                  
+                  <div class="flip-card ">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                          <!-- <div *ngFor="let flashcard of this.flashcards"> -->
+                             <h2> {{flashcard.question}} </h2>
+                  
+                            <!-- </div> -->
+                      </div>
+                      <div class="flip-card-back">
+                          <!-- <div *ngFor="let flashcard of this.flashcards"> -->
+                              <br>
+                              <h2>{{flashcard.answer}}</h2>
+                              <br>Category: {{flashcard.topic.topicName}}
+                              <br><br><br><br><button (click)="questionMastered(flashcard)"  class="del">Mastered</button>
+                            <!-- </div> -->
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <br> <br>
+                  </div>
+                  <!-- </div> -->
+                  </div>
+
+                   
+                    
+                  </form>
+              </div>
+            </div>
+          </div>
+          <br>
+          <br>
+
+
+
+
+
+
+<app-footer></app-footer>

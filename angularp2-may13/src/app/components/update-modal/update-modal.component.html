@@ -1,0 +1,13 @@
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Update User Information</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <app-update-info></app-update-info>
+    </div>
+  </ng-template>
+  
+  <button class="btn btn-outline-primary mb-2 mr-2" (click)="openVerticallyCentered(content)">Update</button>

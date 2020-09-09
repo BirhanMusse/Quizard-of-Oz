@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="card-body">
+        <form [formGroup]="newCardForm" (ngSubmit)="onSubmit()">
+            <div class="input-group form-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                </div>
+                    <label for="inputTopic"></label>
+                    <!-- <input type="text" class="form-control" id="topic" formControlName="topicName" placeholder="Topic"> -->
+                    <select id="inputTopic" class="form-control" formControlName="topicName">
+                            <option selected>Choose Topic..</option>
+                            <option>Mathematics</option>
+                            <option>Technology</option>
+                            <option>Geography</option>
+                          </select>
+            </div>
+            <div class="input-group form-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                </div>
+                <input type="text" class="form-control" id="question" formControlName="question" placeholder="Question">
+            </div>
+            <div class="input-group form-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    </div>
+                    <input type="text" class="form-control" id="answer" formControlName="answer" placeholder="Answer">
+                  
+                </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn float-right login_btn bg-primary text-white">
+            </div>   
+        </form>
+       
+    </div>
+</div>

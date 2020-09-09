@@ -1,0 +1,29 @@
+<div class="card text-center">
+  <div class="card-header">
+      User Information
+    </div>
+  <div class="card-body">
+    <div *ngIf="user" class="display font-weight-bold">
+        <br>
+          <div class="border border text-left">First Name:
+          <p class="text-center"> {{user.firstName  }}</p>
+          </div>
+        <br>
+          <div class="border border text-left">Last Name:
+          <p class="text-center"> {{user.lastName}}</p>
+          </div>
+        <br>
+          <div class="border border text-left">Email:
+          <p class="text-center"> {{user.email}} </p>
+          </div>
+        <br>
+          <div class="border border text-left">UserType:
+          <p class="text-center"> {{ user.userType.userTypeName}} </p>
+          </div>
+        <br>
+      </div>
+  </div>
+  <div class="card-footer text-muted">
+      <app-update-modal></app-update-modal>
+    </div>
+</div>

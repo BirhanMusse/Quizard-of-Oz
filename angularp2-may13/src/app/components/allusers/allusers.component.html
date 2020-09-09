@@ -1,0 +1,21 @@
+<div class="card text-center">
+<div class="card-header">
+  User Views
+</div>
+<div class="card-body">
+  <h5 class="card-title">Select All Users</h5>
+  <p class="card-text">All Mentors and Mentees</p>
+  <div class="form-group">
+        <button class="btn btn-primary btn-center" (click)="getUsers()">GET ALL USERS</button>
+      </div>
+      <ul>
+        <li *ngFor="let user of this.users">
+          Name: {{user.firstName}} {{user.lastName}}, Usertype: {{user.userType.userTypeName}}
+        </li>
+      </ul>
+</div>
+      <div class="card-footer text-muted">
+      </div>
+
+</div>
+
